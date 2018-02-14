@@ -1,5 +1,5 @@
 defmodule TextClient.Prompter do
-  alias TextClient.Display
+  alias TextClient.{Player, Display}
 
   @slots [
     {"1", :r1c1}, {"2", :r1c2}, {"3", :r1c3},
@@ -32,7 +32,7 @@ defmodule TextClient.Prompter do
     |> next_move_validator(game)
   end
 
-  defp next_move_validator(move, %{board_state: board_state} = game) do
+  defp next_move_validator(move, %Player{tally: %{board_state: board_state}} = game) do
     { empty_slots, _ } = Display.nil_replacer(board_state)
     
     empty_slots

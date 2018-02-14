@@ -1,6 +1,7 @@
 defmodule TextClient.Display do
+  alias TextClient.Player
 
-  def board(%{board_state: board_state} = game) do
+  def board(%Player{tally: %{board_state: board_state}} = game) do
     board_state
     |> nil_to_num()
     |> draw_board()
