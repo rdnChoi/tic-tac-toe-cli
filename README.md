@@ -1,4 +1,3 @@
-# Learnings
+Tic Tac Toe CLI Implementation
 
-1. Input is ALWAYS a string... Remember to trim it but also to convert your required selection parameters to strings for easy comparsion.
-2. 
+Requires Tic Tac Toe app. 
